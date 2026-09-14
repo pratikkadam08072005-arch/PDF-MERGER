@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free online PDF merger and document converter. Merge PDFs, edit PDF files, convert PDF to Word, Word to PDF, images to PDF, and more." />
+  <meta name="keywords" content="PDF merger, merge PDF online, free PDF merger, PDF editor, PDF to Word, Word to PDF, image to PDF" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#f4f2eb" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free PDF Merger and Document Tools | Paperfold" />
+  <meta property="og:description" content="Merge, edit, and convert PDFs, Word documents, and images online with Paperfold." />
+  <meta property="og:site_name" content="Paperfold" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Free PDF Merger and Document Tools | Paperfold" />
+  <meta name="twitter:description" content="Merge, edit, and convert documents online with Paperfold." />
+  <title>Free PDF Merger Online | Merge PDF Files | Paperfold</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Paperfold PDF Merger",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Free online PDF merger, PDF editor, document converter, and image converter.",
+    "featureList": ["Merge PDF files", "Edit PDF files", "Convert PDF to Word", "Convert Word to PDF", "Convert images to PDF", "Edit images"]
+  }
+  </script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Paperfold home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>paperfold</span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> Python powered</div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow">Document tools / 01</div>
+        <h1 id="page-title">Every file has<br><em>a next move.</em></h1>
+        <p class="intro-copy">Free PDF merger and document converter. Merge, edit, and reshape your files in one quiet workspace. Pick a tool, drop in your files, and take the result with you.</p>
+      </section>
+
+      <section class="workspace" aria-label="Document tools">
+        <nav class="tool-nav" aria-label="Choose a document operation">
+          <button class="tool-tab is-active" type="button" data-operation="merge"><span class="tool-symbol">+</span><span>Merge PDFs</span></button>
+          <button class="tool-tab" type="button" data-operation="pdf-to-word"><span class="tool-symbol">P›</span><span>PDF to Word</span></button>
+          <button class="tool-tab" type="button" data-operation="word-to-pdf"><span class="tool-symbol">W›</span><span>Word to PDF</span></button>
+          <button class="tool-tab" type="button" data-operation="image-to-pdf"><span class="tool-symbol">I›</span><span>Image to PDF</span></button>
+          <button class="tool-tab" type="button" data-operation="image-to-word"><span class="tool-symbol">I›</span><span>Image to Word</span></button>
+          <button class="tool-tab" type="button" data-operation="pdf-editor"><span class="tool-symbol">P✎</span><span>PDF editor</span></button>
+          <button class="tool-tab" type="button" data-operation="word-editor"><span class="tool-symbol">W✎</span><span>Word editor</span></button>
+          <button class="tool-tab" type="button" data-operation="image-editor"><span class="tool-symbol">I✎</span><span>Image editor</span></button>
+        </nav>
+
+        <div class="workspace-head">
+          <div>
+            <div class="section-kicker" id="operation-kicker">PDF workflow / 01</div>
+            <h2 id="operation-title">Merge PDFs</h2>
+            <span class="file-count" id="file-count">No files added</span>
+            <p class="operation-description" id="operation-description">Combine multiple PDFs in the order you choose.</p>
+          </div>
+          <button class="text-button" id="clear-all" type="button" disabled>Clear all <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-label="Add files">
+          <input id="file-input" type="file" hidden />
+          <div class="drop-icon" aria-hidden="true"><span>+</span></div>
+          <h3 id="drop-title">Drop PDFs here</h3>
+          <p>or <button class="inline-button" id="browse-button" type="button">browse your files</button></p>
+          <small id="drop-help">PDF only · up to 50 MB per file</small>
+        </div>
+
+        <div class="queue" id="queue" aria-live="polite"></div>
+
+        <div class="editor-controls" id="editor-controls" hidden></div>
+
+        <div class="action-row">
+          <div class="privacy-note"><span class="lock-icon" aria-hidden="true">⌑</span><span>Files are removed after processing</span></div>
+          <button class="merge-button" id="action-button" type="button" disabled><span>Merge PDFs</span><span class="button-arrow" aria-hidden="true">→</span></button>
+        </div>
+        <div class="message" id="message" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="tip-strip" aria-label="How it works">
+        <div class="tip-number">01</div><p><strong>Choose a tool.</strong> Each workflow accepts exactly the files it can process.</p>
+        <div class="tip-number">02</div><p><strong>Download the result.</strong> Your converted file is returned immediately.</p>
+      </section>
+    </main>
+
+    <footer><span>Paperfold</span><span>Private by default</span><span>Document tools</span></footer>
+  </div>
+</body>
+</html>
